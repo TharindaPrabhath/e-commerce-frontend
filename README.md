@@ -7,7 +7,7 @@
 
 ## Overview
 
-Sample e-commerce application responsive design.
+Sample e-commerce application frontend with responsive design.
 
 ## Features
 
