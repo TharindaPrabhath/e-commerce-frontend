@@ -10,6 +10,10 @@ import "../styles/globals.css"
 import createEmotionCache from "../utils/createEmotionCache"
 const clientSideEmotionCache = createEmotionCache()
 
+// react-toastify
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+
 function MyApp(props: any) {
   const {
     Component,
@@ -25,6 +29,7 @@ function MyApp(props: any) {
           <Layout>
             <Component {...pageProps} />
           </Layout>
+          <ToastContainer position="bottom-right" />
         </ThemeProvider>
       </CacheProvider>
     </>

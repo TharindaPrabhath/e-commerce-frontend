@@ -12,6 +12,7 @@ import IconButton from "@mui/material/IconButton"
 import Stack from "@mui/material/Stack"
 import Tooltip from "@mui/material/Tooltip"
 import Box from "@mui/material/Box"
+import { blue } from "@mui/material/colors"
 import { DataGrid, GridColDef } from "@mui/x-data-grid"
 import { useTheme } from "@mui/material/styles"
 
@@ -26,13 +27,12 @@ import AppLayout from "../../layouts"
 // components
 import Page from "../../components/Page"
 import SearchBar from "../../components/SearchBar"
+import DeletePopup from "../../components/DeletePopup"
 
 // config
 import axios from "../../config/axios"
-import { blue } from "@mui/material/colors"
-import DeletePopup from "../../components/DeletePopup"
 
-function Products() {
+function Favorites() {
   const theme = useTheme()
   const router = useRouter()
 
@@ -97,7 +97,7 @@ function Products() {
             </Tooltip>
 
             <Tooltip title="Edit">
-              <IconButton onClick={() => router.push(`/products/edit-product/${params.row.id}`)}>
+              <IconButton>
                 <EditIcon color="primary" />
               </IconButton>
             </Tooltip>
@@ -141,7 +141,7 @@ function Products() {
         letterSpacing={theme.spacing(0.25)}
         gutterBottom
       >
-        PRODUCTS
+        FAVOURITE PRODUCTS
       </Typography>
       <Stack
         direction="row"
@@ -222,6 +222,6 @@ function Products() {
   )
 }
 
-Products.layout = AppLayout
+Favorites.layout = AppLayout
 
-export default Products
+export default Favorites

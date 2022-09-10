@@ -25,16 +25,16 @@ import SellOutlinedIcon from "@mui/icons-material/SellOutlined"
 import { common } from "../data"
 
 export const SidebarGroups = [
-  {
-    title: "",
-    tabs: [
-      {
-        title: "Dashboard",
-        icon: SpeedIcon,
-        to: "/",
-      },
-    ],
-  },
+  // {
+  //   title: "",
+  //   tabs: [
+  //     {
+  //       title: "Dashboard",
+  //       icon: SpeedIcon,
+  //       to: "/",
+  //     },
+  //   ],
+  // },
   {
     title: "",
     tabs: [
@@ -55,11 +55,10 @@ export const SidebarGroups = [
 function Sidebar({ shrink, onShrink }: { shrink: boolean; onShrink: () => void }) {
   const theme = useTheme()
   const router = useRouter()
-  const [open, setOpen] = useState(false)
 
   const renderSidebarTabs = SidebarGroups.map((group, index) => {
     return (
-      <Box key={index} sx={{ paddingTop: theme.spacing(2) }}>
+      <Box key={index} sx={{ paddingTop: theme.spacing(4) }}>
         {!group.title && (
           <Typography
             textAlign={shrink ? "center" : "start"}

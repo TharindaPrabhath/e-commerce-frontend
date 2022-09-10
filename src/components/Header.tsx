@@ -14,6 +14,7 @@ import AppBar from "@mui/material/AppBar"
 import Button from "@mui/material/Button"
 import Drawer from "@mui/material/Drawer"
 import Toolbar from "@mui/material/Toolbar"
+import Badge from "@mui/material/Badge"
 import Popper from "@mui/material/Popper"
 import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
@@ -23,6 +24,7 @@ import IconButton from "@mui/material/IconButton"
 import Avatar from "@mui/material/Avatar"
 import Backdrop from "@mui/material/Backdrop"
 import CircularProgress from "@mui/material/CircularProgress"
+import { styled } from "@mui/material/styles"
 import { useTheme } from "@mui/material/styles"
 import { green, grey, red, yellow } from "@mui/material/colors"
 
@@ -122,38 +124,14 @@ function Header({ shrinkSidebar }: { shrinkSidebar: boolean }) {
         </Box>
 
         <Box sx={{ flexGrow: 1 }} />
-        <Stack direction="row" alignItems="center" gap={theme.spacing(2)}>
-          <Button
-            sx={{
-              textAlign: "start",
-              color: theme.palette.secondary.main,
-              [theme.breakpoints.down("sm")]: { display: "none" },
-            }}
-            onClick={(e) => {
-              setAvatarPopperAnchor(avatarPopperAnchor ? null : e.currentTarget)
-            }}
-          >
-            <Avatar
-              // src={user?.image}
-              alt="profile avatar"
-              sx={{
-                width: 40,
-                height: 40,
-                marginRight: theme.spacing(1),
-              }}
-            />
-            <Box>
-              <Typography sx={{ fontWeight: theme.typography.fontWeightBold }}>Sample Name</Typography>
-              <Typography
-                color={grey[700]}
-                sx={{
-                  fontSize: theme.typography.subtitle2,
-                }}
-              >
-                Admin
-              </Typography>
-            </Box>
-          </Button>
+        <Stack direction="row" alignItems="center" gap={theme.spacing(4)}>
+          <Typography variant="caption" fontWeight={theme.typography.fontWeightBold}>
+            Admin
+          </Typography>
+
+          <StyledBadge overlap="circular" anchorOrigin={{ vertical: "bottom", horizontal: "right" }} variant="dot">
+            <Avatar alt="Admin" />
+          </StyledBadge>
         </Stack>
       </Toolbar>
     </AppBar>
@@ -161,3 +139,32 @@ function Header({ shrinkSidebar }: { shrinkSidebar: boolean }) {
 }
 
 export default Header
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    backgroundColor: "#44b700",
+    color: "#44b700",
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+    "&::after": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      animation: "ripple 1.2s infinite ease-in-out",
+      border: "1px solid currentColor",
+      content: '""',
+    },
+  },
+  "@keyframes ripple": {
+    "0%": {
+      transform: "scale(.8)",
+      opacity: 1,
+    },
+    "100%": {
+      transform: "scale(2.4)",
+      opacity: 0,
+    },
+  },
+}))

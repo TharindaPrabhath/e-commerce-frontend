@@ -1,36 +1,61 @@
-## edexma-frontend
+<div style="display: flex; flex-direction: row">
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next Js" />
+  <img src="https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white" alt="MUI" />
+  <img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
+  </div>
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Overview
 
-## Getting Started
+Sample e-commerce application responsive design.
 
-First, run the development server:
+## Features
+
+- Add products
+- View products
+- Edit products
+- Upload multiple product images
+- Search products by name
+
+## Installation
+
+Install the dependencies & run the development server:
 
 ```bash
-npm run dev
-# or
+yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to interact with the platform.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+#### Products Page
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<img src="https://res.cloudinary.com/drifly/image/upload/v1662821849/GitHub/ECommerce/Products_zpr0vj.png" width="500px" alt="Products Page"/>
 
-## Learn More
+#### Add Product Page
 
-To learn more about Next.js, take a look at the following resources:
+<img src="https://res.cloudinary.com/drifly/image/upload/v1662821842/GitHub/ECommerce/Add_Product_zwqggq.png" width="500px" alt="Add Product Page"/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Edit Product Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img src="https://res.cloudinary.com/drifly/image/upload/v1662821847/GitHub/ECommerce/Edit_Product_is6a9q.png" width="500px" alt="Edit Product Page"/>
 
-## Deploy on Vercel
+#### Delete PopUp
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<img src="https://res.cloudinary.com/drifly/image/upload/v1662821846/GitHub/ECommerce/Delete_Popup_i5q865.png" width="500px" alt="Delete PopUp"/>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Favourites Page
+
+<img src="https://res.cloudinary.com/drifly/image/upload/v1662821847/GitHub/ECommerce/Favourites_oxu0sf.png" width="500px" alt="Favourites Page"/>
+
+#### Search Results Page
+
+<img src="https://res.cloudinary.com/drifly/image/upload/v1662821849/GitHub/ECommerce/Search_pvzhc2.png" width="500px" alt="Search Results Page"/>
+
+Forks are lovely. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
